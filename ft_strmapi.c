@@ -19,13 +19,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	str = malloc(sizeof(char) * (ft_strlen(s) + 1));  // Aloca um espaço na memoria com valor de s + 1
 	if (!str)
 		return (NULL);
 	i = 0;
 	while (s[i])
 	{
-		str[i] = f(i, s[i]);
+		str[i] = f(i, s[i]); // Copia na memoria o valor do resultado da função fibonacci
 		i++;
 	}
 	str[i] = '\0';
